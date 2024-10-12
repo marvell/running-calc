@@ -76,20 +76,21 @@
             />
             <div id="pace-error" class="text-red-500 text-sm"></div>
 
-            <button
-                onclick="calculate()"
-                class="w-full bg-green-500 text-white font-semibold p-3 rounded mt-6 hover:bg-green-600"
-            >
-                Calculate
-            </button>
-
-            <!-- Clear Button -->
-            <button
-                onclick="clearInputs()"
-                class="w-full bg-gray-500 text-white font-semibold p-3 rounded mt-2 hover:bg-gray-600"
-            >
-                Clear
-            </button>
+            <!-- Calculate and Clear buttons in one row -->
+            <div class="flex mt-6 space-x-2">
+                <button
+                    onclick="calculate()"
+                    class="flex-grow bg-green-500 text-white font-semibold p-3 rounded hover:bg-green-600"
+                >
+                    Calculate
+                </button>
+                <button
+                    onclick="clearInputs()"
+                    class="w-1/3 bg-gray-500 text-white font-semibold p-3 rounded hover:bg-gray-600"
+                >
+                    Clear
+                </button>
+            </div>
 
             <div
                 class="result mt-6 text-3xl font-bold text-center text-green-700"

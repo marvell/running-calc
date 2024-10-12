@@ -7,6 +7,10 @@ vars:
   HELM_RELEASE: running-calc-0
 
 tasks:
+  run:
+    cmds:
+      - open ./index.html
+
   install:
     cmds:
       - helm upgrade --install --atomic {{ .HELM_RELEASE }} {{ .HELM_CHART }} -f ./.cicd/deploy/values.yaml
