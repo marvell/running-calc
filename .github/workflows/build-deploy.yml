@@ -45,5 +45,7 @@ jobs:
           echo "${{ secrets.KUBECONFIG }}" > ~/.kube/config
           chmod 600 ~/.kube/config
 
+      - uses: actions/checkout@v4
+
       - name: Install
         run: task install
