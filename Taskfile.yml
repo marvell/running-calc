@@ -5,6 +5,7 @@ version: '3'
 vars:
   HELM_CHART: https://github.com/marvell/universal-chart/releases/download/v0.1.1/universal-chart-0.1.1.tgz
   HELM_RELEASE: running-calc-0
+  IMAGE_TAG: main
 
 tasks:
   run:
@@ -13,7 +14,7 @@ tasks:
 
   install:
     cmds:
-      - helm upgrade --install --atomic {{ .HELM_RELEASE }} {{ .HELM_CHART }} -f ./.cicd/deploy/values.yaml
+      - helm upgrade --install --atomic {{ .HELM_RELEASE }} {{ .HELM_CHART }} -f ./.cicd/deploy/values.yaml --set image.tag={{ .IMAGE_TAG }}
 
   uninstall:
     cmds:
