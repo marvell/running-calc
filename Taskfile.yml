@@ -3,7 +3,7 @@
 version: '3'
 
 vars:
-  HELM_CHART: https://github.com/marvell/universal-chart/releases/download/v0.1.0/universal-chart-0.1.0.tgz
+  HELM_CHART: https://github.com/marvell/universal-chart/releases/download/v0.1.1/universal-chart-0.1.1.tgz
   HELM_RELEASE: running-calc-0
 
 tasks:
